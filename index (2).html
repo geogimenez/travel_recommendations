@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - Travel Recommendations</title>
+  <link rel="stylesheet" href="travel_recommendations.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      background-color: #333;
+      margin: 0;
+    }
+    nav ul li {
+      display: inline;
+      padding: 14px 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    nav ul li input, nav ul li button {
+      padding: 10px;
+    }
+    #homeSection {
+        background-image: url('https://img.freepik.com/free-photo/flat-lay-composition-with-beach-accessories_23-2148228632.jpg'); background-size: cover; background-position: center; height: 100vh;
+        background-size: cover; 
+        background-position: center; 
+        height: 100vh;"
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .intro h2 {
+      font-size: 2.5em;
+    }
+    .intro p {
+      font-size: 1.2em;
+    }
+    .intro button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .intro button:hover {
+      background-color: #0056b3;
+    }
+    .content {
+      padding: 20px;
+    }
+    #result img {
+      max-width: 300px;
+      height: auto;
+    }
+  </style>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><input type="text" id="searchInput" placeholder="Search for destinations..."></li>
+      <li><button id="searchButton">Search</button></li>
+      <li><button id="clearButton">Clear</button></li>
+    </ul>
+  </nav>
+  
+  <div id="homeSection">
+    <div class="intro">
+      <h2>Welcome to Travel around the world</h2>
+      <p>Your one-stop platform to discover amazing travel destinations around the world.</p>
+      <button onclick="location.href='#';">Book Now</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1>Welcome to Your Travel Guide</h1>
+    <p>Discover your ideal destinations based on your preferences. Explore our recommendations and plan your perfect trip.</p>
+  </div>
+  <div>
+    <label for="categorySelect">Select Category:</label>
+    <select id="categorySelect">
+      <option value="countries">Countries</option>
+      <option value="temples">Temples</option>
+      <option value="beaches">Beaches</option>
+    </select>
+  </div>
+  <div>
+    <label for="destinationInput">Enter Destination:</label>
+    <input type="text" id="destinationInput">
+    <button id="btnSearch">Search</button>
+  </div>
+  <div id="result"></div>
+  <script src="travel_recommendations.js"></script>
+</body>
+</html>
